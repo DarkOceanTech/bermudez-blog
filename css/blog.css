@@ -145,11 +145,17 @@
 }
 
 .text-links:hover {
-  font-weight:bold;
+  /* font-weight:bold; */
+  text-shadow: 0 0 0.9px black;
+}
+
+.text-links-bold {
+  font-weight: normal;
+  text-shadow: 0 0 .9px black;
 }
 
 .text-links-bold:hover {
-  font-weight: normal;
+  text-shadow: 0 0 0 black;
 }
 
 .text-mono {
