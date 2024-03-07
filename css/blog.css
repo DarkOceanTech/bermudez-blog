@@ -129,7 +129,28 @@
   letter-spacing: -0.01em;
 }
 
+.blog-toc {
+  font-size: 18px;;
+}
+
+.blog-toc li {
+  margin-bottom: .8rem;
+}
+
 /* Utilities */
+
+.text-links {
+  text-decoration: underline;
+  color: #1624a1;
+}
+
+.text-links:hover {
+  font-weight:bold;
+}
+
+.text-links-bold:hover {
+  font-weight: normal;
+}
 
 .text-mono {
   font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas,
