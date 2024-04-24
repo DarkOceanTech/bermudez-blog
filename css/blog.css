@@ -151,6 +151,12 @@
   margin-bottom: 0.8rem;
 }
 
+/* TODO: Try not ot use important tag. Remove is possible */
+
+.ul-header {
+  margin-bottom: 0 !important;
+}
+
 /* Utilities */
 
 .text-links {
