@@ -2,7 +2,6 @@
 /** Blog **/
 /** Utilities **/
 /** GitHub **/
-/** Footer **/
 
 /** Showcase **/
 
@@ -17,8 +16,12 @@
 }
 
 .showcase-bg {
-  padding-top: 20px;
-  background-color: #0e1216;
+  padding-top: 8rem;
+  /* Fallback solid color for older browsers */
+  background-color: #247792; 
+
+  /* Actual gradient */
+  background: linear-gradient(to right, #06212b, #01011a);
   color: #f5f5f5;
 }
 
@@ -116,6 +119,101 @@
 
 /** Blog **/
 
+.blog-header {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+/* View Pdf Feature */
+
+#viewPdfButton {
+  padding: .7rem 3.5rem;;
+  background-color: var(--black-bg); /* A nice Azure blue */
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#viewPdfButton:hover {
+  background-color: var(--secondary-blue);
+}
+
+@media screen and (max-width: 420px) {
+  #viewPdfButton {
+    padding: 0.5rem 2rem;
+    margin: 0;
+    font-size: 14px;
+    align-content: center;
+  }
+}
+
+/* Social Share Buttons */
+.platforms-chips-wrapper {
+  flex-wrap: wrap;
+  display:flex;
+  grid-column-gap: 8px;
+  grid-row-gap: 12px;
+  margin: 0;
+  padding: 0;
+  justify-content: flex-end;
+}
+
+.chip-platform {
+  grid-column-gap: 8px !important;
+  align-items: center !important;
+  padding: 6px 12px !important;
+  font-weight: 600 !important;
+  display: flex !important;
+  transition: all .2s;
+}
+
+/* Copy link button */
+/* Adjust width as needed */
+
+.tooltip {
+  position: absolute;
+  transform: translateX(-50%);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+
+  /* Appearance */
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  width: 120px; /* adjust if you like */
+  z-index: 9999; /* ensure it's on top */
+}
+
+/* Tooltip arrow (pointing down since tooltip is above) */
+.tooltip::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  /* The arrow points downward, so top is transparent, bottom is #555 */
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip */
+.show-tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.copy-url-button {
+  position: relative; /* Ensure the button is positioned relative for the tooltip */
+}
+
+/* Main Blog body */
+
 .blog-container {
   max-width: 40rem;
   margin: 0 auto;
@@ -163,6 +261,12 @@
   width: 70%;
 }
 
+/*
+Blog Container 
+Contains all styles for the blog
+*/
+
+/* Overview */
 .blog-toc {
   font-size: 18px;
   margin-bottom: 2rem;
@@ -170,6 +274,25 @@
 
 .blog-toc li {
   margin-bottom: 0.8rem;
+}
+
+/* Body */
+
+.blog-list {
+  color: var(--black-bg);
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+}
+
+.blog-list li {
+  /* font-weight: 500; */
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+  line-height: 1.74;
+}
+
+.blog-list li:last-child {
+  margin-bottom: 0;
 }
 
 /* TODO: Try not ot use important tag. Remove is possible */
@@ -248,33 +371,6 @@
 
 .position-absolute {
   position: absolute;
-}
-
-/** Footer **/
-
-.footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  height: 100px;
-  padding: 1rem;
-}
-
-.footer p {
-  margin: 0;
-}
-
-.footer-hr {
-  border: 0;
-  height: 3px;
-  background-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0),
-    rgba(9, 84, 132),
-    rgba(0, 0, 0, 0)
-  );
 }
 
 @media screen and (max-width: 1280px) {

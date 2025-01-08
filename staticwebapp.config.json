@@ -1,0 +1,55 @@
+{
+  "trailingSlash": "auto",
+  "routes": [
+    {
+      "route": "/index.html",
+      "redirect": "/",
+      "statusCode": 301
+    },
+    {
+      "route": "/customer/arizona-sales-tax.html",
+      "redirect": "customer/arizona-sales-tax",
+      "statusCode": 301
+    },
+    {
+      "route": "/customer/manage-customer-invoices-and-collect-payments.html",
+      "redirect": "customer/manage-customer-invoices-and-collect-payments",
+      "statusCode": 301
+    },
+    {
+      "route": "/industry/escrow-accounting-for-property-managers.html",
+      "redirect": "/industry/escrow-accounting-for-property-managers",
+      "statusCode": 301
+    },
+    {
+      "route": "/self-employed/get-the-most-out-of-your-home-office-deduction.html",
+      "redirect": "self-employed/get-the-most-out-of-your-home-office-deduction",
+      "statusCode": 301
+    },
+    {
+      "route": "/self-employed/reduce-taxes-by-using-your-car-for-business.html",
+      "redirect": "self-employed/reduce-taxes-by-using-your-car-for-business",
+      "statusCode": 301
+    },
+    {
+      "route": "/tax-planning/questions-to-ask-when-hiring-a-tax-accountant.html",
+      "redirect": "tax-planning/questions-to-ask-when-hiring-a-tax-accountant",
+      "statusCode": 301
+    },
+    {
+      "route": "/vendor/manage-1099-nec-nonemployee-compensation.html",
+      "redirect": "vendor/manage-1099-nec-nonemployee-compensation",
+      "statusCode": 301
+    },
+    {
+      "route": "/404.html",
+      "redirect": "404",
+      "statusCode": 301
+    }
+  ],
+  "responseOverrides": {
+    "404": {
+      "rewrite": "/404.html"
+    }
+  }
+}
